@@ -69,17 +69,52 @@ Bracket expressions, also known as character classes, define a set of characters
 These classes ensure that only valid characters are used in the email address.
 
 ### Character Classes
+Character classes define a set of characters to match. In the regex pattern for email validation, we use:
+
+* `\d` to match any digit (equivalent to `[0-9]`).
+
+        [\da-z\.-]
+
+This class ensures that both digits and letters are valid characters in the domain name.
 
 ### The OR Operator
 The OR operator `|` is not used in this specific regex pattern. However, it is important to note that it is used to match either the expression before or the expression after the operator.
 
 ### Flags
+Flags are optional parameters that modify the behavior of the regex pattern. This pattern does not use any flags. Common flags include:
 
+* `i` for case-insensitive matching.
+* `g` for global matching.
+* `m` for multi-line matching.
 ### Character Escapes
+The `\` character is used to escape special characters in regex.
 
+* `\.` matches a literal dot `.`.
+
+        \.
+
+Escaping the dot ensures that it is treated as a literal character rather than a special regex metacharacter.
 ## Author
 
 This tutorial was created by Sam Cowman, a web development student learning and sharing knowledge on various programming topics . You can find more of my work on my GitHub profile: https://github.com/Sam-Cowman.
 
 ## Sources
+This tutorial is based on knowledge and information gathered from the following sources:
 
+1. MDN Web Docs - Regular Expressions:
+
+* [MDN Web Docs: Regular Expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
+
+2. Regular-Expressions.info:
+
+* [Regular Expressions Tutorial](https://www.regular-expressions.info/tutorial.html)
+
+3. GeeksforGeeks - Regular Expressions in JavaScript:
+
+* [GeeksforGeeks Regex in Javascript](https://www.geeksforgeeks.org/regular-expressions-in-javascript/)
+
+4. Regex Tutorial: Matching a Username:
+
+* [Full-Stack Coding Boot Camp: Regex Tutorial](https://coding-boot-camp.github.io/full-stack/computer-science/regex-tutorial)
+
+These sources provide comprehensive explanations and examples that helped shape this tutorial on regex patterns for email validation.
