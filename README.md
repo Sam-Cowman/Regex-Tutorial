@@ -1,10 +1,14 @@
 # Regex-Tutorial
 
-Introductory paragraph (replace this with your text)
+In this guide, we will break down a specific regex pattern used to match and validate email addresses. By the end of this tutorial, you'll have a thorough understanding of each component of the regex pattern and how it contributes to the overall functionality. This tutorial is intended for web development students and anyone interested in learning more about regex patterns.
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+The regex pattern we will be examining is:
+
+/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+
+This pattern is used to verify that user input is a valid email address. It ensures that the email starts with a sequence of characters, followed by the @ symbol, a domain name, and a top-level domain (TLD) with specific constraints. Each part of this regex has a unique role in ensuring the email address is correctly formatted.
 
 ## Table of Contents
 
