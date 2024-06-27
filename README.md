@@ -1,4 +1,4 @@
-# Regex-Tutorial: Email 
+# Regex-Tutorial: Matching an Email 
 
 In this guide, we will break down a specific regex pattern used to match and validate email addresses. By the end of this tutorial, you'll have a thorough understanding of each component of the regex pattern and how it contributes to the overall functionality. This tutorial is intended for web development students and anyone interested in learning more about regex patterns.
 
@@ -43,12 +43,35 @@ Quantifiers specify how many instances of a character, group, or character class
 The `+` quantifier ensures that there is at least one character before the `@` and in the domain, while `{2,6}` ensures that the TLD (Top-Level Domain) is between 2 and 6 characters long.
 
 ### Grouping Constructs
+Parentheses () are used for grouping and capturing parts of the pattern.
+
+* `([a-z0-9_\.-]+)` captures the local part of the email.
+* `([\da-z\.-]+)` captures the domain name.
+* `([a-z\.]{2,6})` captures the top-level domain (TLD).
+
+        ([a-z0-9_\.-]+)
+        ([\da-z\.-]+)
+        ([a-z\.]{2,6})
+
+These groups capture different parts of the email address, which can be useful for further processing.
 
 ### Bracket Expressions
+Bracket expressions, also known as character classes, define a set of characters to match.
+
+* `[a-z0-9_\.-]` matches any lowercase letter, digit, underscore, dot, or hyphen.
+* `[\da-z\.-]` matches any digit, lowercase letter, dot, or hyphen.
+* `[a-z\.]` matches any lowercase letter or dot.
+
+        [a-z0-9_\.-]
+        [\da-z\.-]
+        [a-z\.]
+
+These classes ensure that only valid characters are used in the email address.
 
 ### Character Classes
 
 ### The OR Operator
+The OR operator `|` is not used in this specific regex pattern. However, it is important to note that it is used to match either the expression before or the expression after the operator.
 
 ### Flags
 
